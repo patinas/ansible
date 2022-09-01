@@ -1,0 +1,14 @@
+---
+
+- name: Config Push
+
+  hosts: R1
+
+  tasks:
+    - name: Push config
+      ios_config:
+        src: "/mnt/chromeos/GoogleDrive/SharedDrives/DATA/Downloads/OPGAVE/R1.txt"
+
+    - name: Save config
+      ios_config:
+        save_when: modified
